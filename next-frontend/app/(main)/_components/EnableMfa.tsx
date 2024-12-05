@@ -36,10 +36,13 @@ import RevokeMfa from "./_common/RevokeMfa";
 
 const EnableMfa = () => {
   //const queryClient = useQueryClient();
-  const { user, refetch } = useAuthContext();
+  const { user, refetch } = useAuthContext();  
   const [showKey, setShowKey] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [copied, setCopied] = useState(false);
+
+  console.log(user, "userrrrrrrr");
+  
 
   const { data, isLoading } = useQuery({
     queryKey: ["mfa-setup"],
@@ -53,6 +56,9 @@ const EnableMfa = () => {
   });
 
   const mfaData = data ?? ({} as mfaType);
+
+  console.log(mfaData, "MFADATA");
+  
 
   const FormSchema = z.object({
     pin: z.string().min(6, {

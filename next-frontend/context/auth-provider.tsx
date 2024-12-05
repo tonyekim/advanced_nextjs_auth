@@ -1,5 +1,5 @@
 "use client";
-
+ 
 import useAuth from "@/hooks/use-auth";
 import React, { createContext, useContext } from "react";
 
@@ -29,7 +29,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
 }) => {
   const { data, error, isLoading, isFetching, refetch } = useAuth();
   const user = data?.data?.user;
-
+ 
   return (
     <AuthContext.Provider
       value={{ user, error, isLoading, isFetching, refetch }}
