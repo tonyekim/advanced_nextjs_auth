@@ -41,7 +41,7 @@ const EnableMfa = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [copied, setCopied] = useState(false);
 
-  console.log(user, "userrrrrrrr");
+  console.log(user, "userrrrrrrr ");
   
 
   const { data, isLoading } = useQuery({

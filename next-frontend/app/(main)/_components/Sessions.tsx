@@ -13,11 +13,14 @@ const Sessions = () => {
     staleTime: Infinity,
   });
 
+
+  
   const { mutate, isPending } = useMutation({
     mutationFn: sessionDelMutationFn,
   });
 
   const sessions = data?.sessions || [];
+
 
   const currentSession = sessions?.find((session) => session.isCurrent);
   const otherSessions = sessions?.filter(
