@@ -17,26 +17,10 @@ import {
   threeMinutesAgo,
 } from "../../common/utils/date-time";
 import SessionModel from "../../database/models/session.model";
-// import UserModel from "../../database/models/user.model";
-// import VerificationCodeModel from "../../database/models/verification.model";
 import { config } from "../../config/app.config";
-// import {
-//   refreshTokenSignOptions,
-//   RefreshTPayload,
-//   signJwtToken,
-//   verifyJwtToken,
-// } from "../../common/utils/jwt";
 
 import { refreshTokenSignOptions, RefreshTPayload, signJwtToken, verifyJwtToken } from "../../common/utils/jwt";
-// import { sendEmail } from "../../mailers/mailer";
-// import {
-//   passwordResetTemplate,
-//   verifyEmailTemplate,
-// } from "../../mailers/templates/template";
-// import { HTTPSTATUS } from "../../config/http.config";
-// import { hashValue } from "../../common/utils/bcrypt";
 import { logger } from "../../common/utils/logger";
-
 import { LoginDto, RegisterDto, resetPasswordDto } from "../../common/interface/auth.interface";
 import UserModel from "../../database/models/user.model";
 import VerificationCodeModel from "../../database/models/verification.model";
@@ -128,6 +112,7 @@ export class AuthService {
         });
 
         logger.info(`Signing tokens for user ID: ${user._id}`);
+        
         const accessToken = signJwtToken({
           userId: user._id,
           sessionId: session._id,

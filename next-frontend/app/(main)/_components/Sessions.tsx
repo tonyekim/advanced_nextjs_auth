@@ -13,8 +13,6 @@ const Sessions = () => {
     staleTime: Infinity,
   });
 
-
-  
   const { mutate, isPending } = useMutation({
     mutationFn: sessionDelMutationFn,
   });

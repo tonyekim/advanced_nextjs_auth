@@ -1,8 +1,9 @@
 import React from 'react'
+import Sessions from '../_components/Sessions'
 
 const page = () => {
   return (
-    <div>page</div>
+   <Sessions />
   )
 }
 

@@ -67,7 +67,7 @@ export default function SignUp() {
         toast({
           title: "Error",
           description: error.message,
-          variant: "destructive"
+          variant: "destructive",
         });
       },
     });

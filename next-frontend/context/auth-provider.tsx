@@ -29,6 +29,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
 }) => {
   const { data, error, isLoading, isFetching, refetch } = useAuth();
   const user = data?.data?.user;
+
+  console.log(user, 'UUUUUUUUUUUUUUUUUUUUUUUU');
+  
  
   return (
     <AuthContext.Provider
